@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ordonezkriziapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ordonezkriziapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ordonezkriziapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ordonezkriziapipelinesjavascriptdocker 
+          image: myblacklistcontainer.azurecr.io/ordonezkriziapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
